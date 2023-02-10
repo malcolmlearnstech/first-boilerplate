@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server",
+    "start-dev": "webpack -w & nodemon server",
     "test": "test"
   },
   "author": "",
@@ -17,7 +18,9 @@
     "pg-hstore": "^2.3.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
     "react-router-dom": "^6.8.1",
+    "redux": "^4.2.1",
     "sequelize": "^6.28.0"
   },
   "devDependencies": {
