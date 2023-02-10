@@ -7,7 +7,7 @@ const morgan = require('morgan');
 app.use(morgan('dev'));
 
 //setting up static middleware
-app.use(express.static(path.join(__dirname, './public')));
+app.use(express.static(path.join(__dirname, '../public')));
 
 //setting up parsing middleware
 const bodyParser = require('body-parser');
@@ -19,7 +19,7 @@ app.use('/api', require('./apiRoutes'));
 
 //server will serve up the index.html for any requests that don't match an existing API route
 app.get('*', function (req, res) {
-  res.sendFile(path.join(__dirname, './public/index.html'));
+  res.sendFile(path.join(__dirname, '../public/index.html'));
 });
 
 //any error that occurs due to issues with your server
