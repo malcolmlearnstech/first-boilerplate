@@ -1,7 +1,11 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM, { createRoot } from 'react-dom/client';
 
-ReactDOM.render(
-  <div>Hello, world!</div>,
-  document.getElementById('app') // make sure this is the same as the id of the div in your index.html
+// make sure this is the same as the id of the div in your index.html
+ReactDOM.createRoot(document.getElementById('app')).render(
+  <>
+    <h2>
+      <div>Hello, world!</div>
+    </h2>
+  </>
 );
