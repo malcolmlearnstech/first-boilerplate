@@ -5,7 +5,7 @@ import usersReducer from './users';
 import thunk from 'redux-thunk';
 import { createLogger } from 'redux-logger';
 
-const store = configureStore(
+export const store = configureStore(
   { reducer: { tasksReducer, usersReducer } },
   applyMiddleware(thunk, createLogger())
 );
