@@ -1,9 +1,10 @@
 const router = require('express').Router();
 
-router.use('/users', require('./users')); // matches all requests to /api/users/
-router.use('/tasks', require('./tasks')); // matches all requests to  /api/tasks/
-router.use('/login', require('../authentication/auth')); // matches request to /login
-router.use('/signup', require('../authentication/auth')); //matches requests to /signup
+//router.use('/login', require('../authentication/auth'))//middleware for authenticating login HERE
+//router.use('/signup', require('../authentication/auth'))//middleware for authenticating signup HERE
+
+router.use('/users', require('./users')); // middleware that matches all requests to /api/users/
+router.use('/tasks', require('./tasks')); // middleware that matches all requests to  /api/tasks/
 
 //error handling for an API route that does not exist
 router.use(function (req, res, next) {
