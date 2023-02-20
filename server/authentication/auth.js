@@ -1,5 +1,5 @@
 const router = require('express').Router();
-import User from '../db/models/user';
+const User = require('../db/models/user');
 
 //this would be our login route
 router.post('/login', async (req, res, next) => {
@@ -24,4 +24,4 @@ router.post('/signup', async (req, res, next) => {
   }
 });
 
-module.exports = Auth;
+module.export = router;
